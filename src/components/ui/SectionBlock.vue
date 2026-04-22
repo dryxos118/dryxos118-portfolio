@@ -13,12 +13,7 @@
         }"
         class="mb-12 text-center"
       >
-        <UBadge
-          color="neutral"
-          variant="subtle"
-          size="lg"
-          class="rounded-full px-3 py-1"
-        >
+        <UBadge color="neutral" variant="subtle" size="lg" class="px-3 py-1">
           {{ eyebrow }}
         </UBadge>
 

@@ -8,3 +8,13 @@
 .main-min-h {
   min-height: calc(100vh - var(--ui-header-height) - 65px) !important;
 }
+
+.custom-tabs div[data-slot="list"] {
+  width: 75%;
+}
+
+@media (width <= 40rem) {
+  .custom-tabs div[data-slot="list"] {
+    width: 100%;
+  }
+}

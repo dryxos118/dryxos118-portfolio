@@ -3,7 +3,7 @@
     <AppSplashScreen v-if="isLoading" />
     <template v-else>
       <AppHeader />
-      <HomePage />
+      <RouterView />
       <AppFooter />
     </template>
   </UApp>
@@ -12,7 +12,6 @@
 <script setup lang="ts">
 import { fr } from "@nuxt/ui/locale";
 import { onBeforeUnmount, onMounted, ref } from "vue";
-import HomePage from "./pages/HomePage.vue";
 
 const isLoading = ref(true);
 

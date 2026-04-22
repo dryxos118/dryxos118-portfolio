@@ -3,7 +3,7 @@
     id="projects"
     eyebrow="Projets"
     title="Quelques réalisations"
-    description="Des projets pensés pour apprendre, expérimenter et montrer ma capacité à construire proprement."
+    description="Voici les projets que j'ai réalisée."
   >
     <div class="grid gap-6 lg:grid-cols-3">
       <ProjectCard
@@ -34,6 +34,5 @@
 
 <script setup lang="ts">
 import SectionBlock from "@/components/ui/SectionBlock.vue";
-import ProjectCard from "@/components/ui/ProjectCard.vue";
 import { projects } from "@/data/portfolio";
 </script>

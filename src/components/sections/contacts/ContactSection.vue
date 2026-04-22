@@ -3,7 +3,7 @@
     id="contact"
     eyebrow="Objectif"
     title="Construire, apprendre et évoluer"
-    description="Je recherche une équipe dans laquelle je pourrai progresser, contribuer concrètement et faire mes débuts dans un environnement stimulant."
+    description="Envie d’échanger ou de collaborer ? Écris-moi."
   >
     <div class="grid gap-6 lg:grid-cols-2">
       <UCard

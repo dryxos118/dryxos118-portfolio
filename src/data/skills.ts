@@ -5,11 +5,6 @@ export interface Skill {
   readonly type: "MAIN_STACK" | "OTHER_TECHNOLOGIES" | "TOOLS" | "PRACTICES";
 }
 
-export interface SkillGroup {
-  title: string;
-  skills: Skill[];
-}
-
 export const skills: Skill[] = [
   // MAIN STACK
   {
@@ -266,21 +261,6 @@ export const skills: Skill[] = [
   },
 ];
 
-export const skillGroups: SkillGroup[] = [
-  {
-    title: "Stack principale",
-    skills: skills.filter((skill) => skill.type === "MAIN_STACK"),
-  },
-  {
-    title: "Autres technologies",
-    skills: skills.filter((skill) => skill.type === "OTHER_TECHNOLOGIES"),
-  },
-  {
-    title: "Outils",
-    skills: skills.filter((skill) => skill.type === "TOOLS"),
-  },
-  {
-    title: "Pratiques",
-    skills: skills.filter((skill) => skill.type === "PRACTICES"),
-  },
-];
+export const getSkills = (names: string[]): Skill[] => {
+  return skills.filter((skill) => names.includes(skill.name));
+};

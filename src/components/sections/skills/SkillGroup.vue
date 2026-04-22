@@ -19,21 +19,7 @@
     </div>
 
     <div class="flex flex-wrap gap-2.5">
-      <UBadge
-        v-for="skill in skills"
-        :key="skill.name"
-        color="neutral"
-        variant="soft"
-        :class="badgeClass"
-      >
-        <UIcon
-          :name="skill.icon"
-          class="size-4 mr-1.5"
-          :style="{ color: skill.color }"
-        />
-
-        <span>{{ skill.name }}</span>
-      </UBadge>
+      <SkillBadge v-for="skill in skills" :key="skill.name" :skill="skill" />
     </div>
   </div>
 </template>
@@ -58,9 +44,5 @@ const props = withDefaults(
 const titleClass = computed(
   () =>
     `uppercase tracking-[0.2em] font-semibold ${props.featured ? "text-sm text-primary" : "text-xs text-muted"}`,
-);
-
-const badgeClass = computed(
-  () => `px-3.5 py-1.5 text-sm ${props.featured ? "font-medium" : ""}`,
 );
 </script>
