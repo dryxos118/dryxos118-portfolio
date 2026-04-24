@@ -7,67 +7,81 @@
       y: 0,
       transition: { duration: 500 },
     }"
-    class="group h-full rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition hover:-translate-y-1"
+    class="h-full border border-accented bg-default/50 transition-all duration-300 hover:border-primary/40 hover:-translate-y-1"
   >
-    <div class="flex items-start justify-between gap-4">
-      <UBadge color="primary" variant="soft" class="rounded-full px-3 py-1">
-        {{ type }}
-      </UBadge>
-    </div>
+    <div class="flex h-full flex-col space-y-6">
+      <img
+        v-if="project.image"
+        :src="project.image"
+        :alt="project.title"
+        class="h-48 w-full rounded-md object-cover border border-accented"
+      />
 
-    <h3 class="mt-5 text-xl font-semibold text-white">
-      {{ title }}
-    </h3>
+      <div class="flex-1">
+        <h3 class="text-lg font-bold text-highlighted">
+          {{ project.title }}
+        </h3>
 
-    <p class="mt-4 text-sm leading-7 text-neutral-300">
-      {{ description }}
-    </p>
+        <p class="mt-2 text-sm leading-6 text-toned line-clamp-3">
+          {{ project.shortDescription }}
+        </p>
+      </div>
 
-    <div class="mt-5 flex flex-wrap gap-2">
-      <UBadge
-        v-for="tech in stack"
-        :key="tech"
-        color="neutral"
-        variant="soft"
-        class="rounded-full px-3 py-1"
-      >
-        {{ tech }}
-      </UBadge>
-    </div>
+      <div class="flex flex-wrap gap-2">
+        <UBadge
+          v-for="tag in project.tags.slice(0, 3)"
+          :key="tag"
+          color="neutral"
+          variant="soft"
+          class="rounded-full"
+        >
+          {{ tag }}
+        </UBadge>
 
-    <div class="mt-8 flex flex-wrap gap-3">
-      <UButton
-        v-if="github"
-        :to="github"
-        target="_blank"
-        color="neutral"
-        variant="soft"
-        class="rounded-full"
-        icon="i-lucide-github"
-      >
-        GitHub
-      </UButton>
+        <UBadge
+          v-if="project.tags.length > 3"
+          color="neutral"
+          variant="soft"
+          class="rounded-full"
+        >
+          +{{ project.tags.length - 3 }}
+        </UBadge>
+      </div>
 
-      <UButton
-        v-if="demo"
-        :to="demo"
-        target="_blank"
-        class="rounded-full"
-        trailing-icon="i-lucide-external-link"
-      >
-        Demo
-      </UButton>
+      <div class="flex flex-wrap gap-3">
+        <UButton
+          color="neutral"
+          variant="soft"
+          class="rounded-full"
+          icon="i-lucide-eye"
+          @click="isOpen = true"
+        >
+          Détails
+        </UButton>
+
+        <UButton
+          v-if="project.link"
+          :to="project.link"
+          target="_blank"
+          class="rounded-full"
+          trailing-icon="i-lucide-external-link"
+        >
+          Demo
+        </UButton>
+      </div>
+
+      <ProjectModal :project="project" v-model:open="isOpen" />
     </div>
   </UCard>
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+import type { Project } from "@/data/projects";
+
 defineProps<{
-  title: string;
-  type: string;
-  description: string;
-  stack: string[];
-  github?: string;
-  demo?: string;
+  project: Project;
 }>();
+
+const isOpen = ref(false);
 </script>

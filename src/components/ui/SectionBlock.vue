@@ -13,9 +13,7 @@
         }"
         class="mb-12 text-center"
       >
-        <UBadge color="neutral" variant="subtle" size="lg" class="px-3 py-1">
-          {{ eyebrow }}
-        </UBadge>
+        <BaseBadge variant="subtle" :name="eyebrow" />
 
         <h2 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
           {{ title }}

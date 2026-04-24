@@ -7,7 +7,7 @@
       y: 0,
       transition: { duration: 450 },
     }"
-    class="rounded-xl border bg-default/50 p-4"
+    class="border bg-default/50 p-4"
     :class="isPhantom ? 'border-primary/40 bg-primary/5' : 'border-accented'"
   >
     <div class="flex flex-col gap-4 sm:flex-row sm:justify-between">
@@ -17,9 +17,9 @@
             {{ title }}
           </h3>
 
-          <UBadge color="neutral" variant="soft" class="rounded-full">
-            {{ type === "experience" ? "Expérience" : "Formation" }}
-          </UBadge>
+          <BaseBadge
+            :name="type === 'experience' ? 'Expérience' : 'Formation'"
+          />
         </div>
 
         <p class="text-sm text-primary">
@@ -32,12 +32,18 @@
       </div>
     </div>
 
-    <p class="mt-5 text-sm leading-7 text-toned">
+    <p class="mt-5 text-sm text-toned">
       {{ description }}
     </p>
 
     <div v-if="techs.length" class="mt-5 flex flex-wrap gap-2">
-      <SkillBadge v-for="tech in techs" :key="tech.name" :skill="tech" />
+      <BaseBadge
+        v-for="tech in techs"
+        :key="tech.name"
+        :name="tech.name"
+        :icon="tech.icon"
+        :icon-color="tech.color"
+      />
     </div>
   </UCard>
 </template>

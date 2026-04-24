@@ -3,17 +3,13 @@
     id="projects"
     eyebrow="Projets"
     title="Quelques réalisations"
-    description="Voici les projets que j'ai réalisée."
+    description="Une sélection de projets que j'ai développés."
   >
     <div class="grid gap-6 lg:grid-cols-3">
       <ProjectCard
         v-for="project in projects"
-        :key="project.title"
-        :title="project.title"
-        :type="project.type"
-        :description="project.description"
-        :stack="project.stack"
-        :github="project.github"
+        :key="project.id"
+        :project="project"
       />
     </div>
 
@@ -23,7 +19,7 @@
         target="_blank"
         color="neutral"
         variant="soft"
-        class="rounded-full"
+        leading-icon="simple-icons:github"
         trailing-icon="i-lucide-arrow-up-right"
       >
         Voir plus sur GitHub
@@ -34,5 +30,7 @@
 
 <script setup lang="ts">
 import SectionBlock from "@/components/ui/SectionBlock.vue";
-import { projects } from "@/data/portfolio";
+import { PROJECTS } from "@/data/projects";
+
+const projects = PROJECTS;
 </script>

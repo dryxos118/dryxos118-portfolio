@@ -1,15 +1,12 @@
 <template>
   <div class="mt-6 flex flex-wrap justify-center gap-3 lg:justify-start">
-    <UBadge
-      v-for="item in Infos"
-      :key="item.title"
-      color="neutral"
+    <BaseBadge
+      v-for="info in Infos"
+      :key="info.title"
+      :name="info.title"
+      :icon="info.icon"
       variant="outline"
-      class="rounded-full px-3 py-1"
-      :icon="item.icon"
-    >
-      {{ item.title }}
-    </UBadge>
+    />
   </div>
 </template>
 

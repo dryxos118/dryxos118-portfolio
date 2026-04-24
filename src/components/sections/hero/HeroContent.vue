@@ -9,15 +9,18 @@
     }"
     class="max-w-2xl text-center lg:text-left"
   >
-    <UBadge color="primary" variant="soft" icon="i-lucide-sparkles">
-      Disponible pour une opportunité junior
-    </UBadge>
+    <BaseBadge
+      color="primary"
+      variant="soft"
+      icon="i-lucide-sparkles"
+      name="Disponible pour une opportunité"
+    />
 
     <h1
       class="mt-6 text-4xl font-black tracking-tight text-default sm:text-5xl"
     >
       Alexis
-      <span class="block text-primary">Développeur Full Stack</span>
+      <span class="block mt-1 text-primary">Développeur Full Stack</span>
     </h1>
 
     <p class="mt-6 text-base leading-8 text-toned sm:text-lg">

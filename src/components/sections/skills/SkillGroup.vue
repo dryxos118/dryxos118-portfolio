@@ -19,7 +19,13 @@
     </div>
 
     <div class="flex flex-wrap gap-2.5">
-      <SkillBadge v-for="skill in skills" :key="skill.name" :skill="skill" />
+      <BaseBadge
+        v-for="skill in skills"
+        :key="skill.name"
+        :name="skill.name"
+        :icon="skill.icon"
+        :icon-color="skill.color"
+      />
     </div>
   </div>
 </template>
