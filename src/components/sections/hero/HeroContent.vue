@@ -36,7 +36,7 @@
       <UButton
         color="neutral"
         size="xl"
-        variant="subtle"
+        variant="soft"
         trailing-icon="i-lucide-folder-kanban"
         @click="scrollToSection('projects')"
       >
@@ -45,7 +45,7 @@
 
       <UButton
         color="primary"
-        variant="outline"
+        variant="subtle"
         size="xl"
         trailing-icon="i-lucide-mail"
         @click="scrollToSection('contact')"

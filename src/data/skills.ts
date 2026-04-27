@@ -2,7 +2,12 @@ export interface Skill {
   readonly name: string;
   readonly icon: string;
   readonly color: string;
-  readonly type: "MAIN_STACK" | "OTHER_TECHNOLOGIES" | "TOOLS" | "PRACTICES";
+  readonly type:
+    | "MAIN_STACK"
+    | "OTHER_TECHNOLOGIES"
+    | "TOOLS"
+    | "PRACTICES"
+    | "OTHER";
 }
 
 export const skills: Skill[] = [
@@ -64,6 +69,12 @@ export const skills: Skill[] = [
     type: "OTHER_TECHNOLOGIES",
   },
   {
+    name: "Tailwind CSS",
+    icon: "simple-icons:tailwindcss",
+    color: "#06B6D4",
+    type: "OTHER_TECHNOLOGIES",
+  },
+  {
     name: "JavaScript",
     icon: "simple-icons:javascript",
     color: "#F7DF1E",
@@ -71,7 +82,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Java",
-    icon: "simple-icons:openjdk",
+    icon: "devicon-plain:java",
     color: "#ED8B00",
     type: "OTHER_TECHNOLOGIES",
   },
@@ -142,7 +153,7 @@ export const skills: Skill[] = [
     type: "OTHER_TECHNOLOGIES",
   },
   {
-    name: "Hibernate",
+    name: "JPA / Hibernate",
     icon: "simple-icons:hibernate",
     color: "#59666C",
     type: "OTHER_TECHNOLOGIES",
@@ -259,8 +270,30 @@ export const skills: Skill[] = [
     color: "#009688",
     type: "PRACTICES",
   },
+
+  // OTHER
+  {
+    name: "Vuetify",
+    icon: "simple-icons:vuetify",
+    color: "#1867C0",
+    type: "OTHER",
+  },
+  {
+    name: "NuxtUI",
+    icon: "simple-icons:nuxtdotjs",
+    color: "#00DC82",
+    type: "OTHER",
+  },
+  {
+    name: "EmailJS",
+    icon: "i-lucide-mail",
+    color: "#FF4081",
+    type: "OTHER",
+  },
 ];
 
 export const getSkills = (names: string[]): Skill[] => {
-  return skills.filter((skill) => names.includes(skill.name));
+  return names
+    .map((name) => skills.find((skill) => skill.name === name))
+    .filter((skill): skill is Skill => !!skill);
 };
