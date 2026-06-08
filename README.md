@@ -1,4 +1,3 @@
-````md
 # ✨ Alexis Portfolio
 
 Portfolio développeur Full Stack réalisé avec Vue 3, TypeScript et Nuxt UI.
@@ -70,4 +69,3 @@ src/
 ## ⭐ Licence
 
 Projet open-source sous licence MIT.
-````
