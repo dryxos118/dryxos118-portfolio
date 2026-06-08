@@ -14,6 +14,11 @@ export default defineConfig({
           secondary: "violet",
           neutral: "gray",
         },
+        toast: {
+          slots: {
+            root: "border border-accented bg-default/50 p-4",
+          },
+        },
       },
     }),
   ],

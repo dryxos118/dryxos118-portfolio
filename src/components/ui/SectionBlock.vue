@@ -1,5 +1,5 @@
 <template>
-  <section :id="id" class="py-24 sm:py-28">
+  <section :id="id" class="py-24 sm:py-28" :class="class">
     <UContainer>
       <div
         v-motion
@@ -38,5 +38,6 @@ defineProps<{
   eyebrow: string;
   title: string;
   description?: string;
+  class?: string;
 }>();
 </script>

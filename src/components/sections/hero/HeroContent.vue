@@ -19,7 +19,7 @@
     <h1
       class="mt-6 text-4xl font-black tracking-tight text-default sm:text-5xl"
     >
-      Alexis
+      Alexis Hu-Hiest
       <span class="block mt-1 text-primary">Développeur Full Stack</span>
     </h1>
 

@@ -2,8 +2,8 @@
   <UFooter>
     <template #left>
       <p class="text-xs text-muted">
-        © {{ new Date().getFullYear() }} Dryxos118 - Alexis Hu — Tous droits
-        réservés.
+        © {{ new Date().getFullYear() }} dryxos118 - Alexis Hu-Hiest — Tous
+        droits réservés.
       </p>
     </template>
 
