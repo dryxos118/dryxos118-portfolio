@@ -28,6 +28,7 @@ export default defineConfig({
     },
   },
   server: {
-    host: true,
+    host: false, // true only for localhost
   },
+  base: "/dryxos118-portfolio",
 });
