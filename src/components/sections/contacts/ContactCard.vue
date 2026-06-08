@@ -72,6 +72,7 @@ import type { FormSubmitEvent } from "@nuxt/ui";
 import { reactive, ref } from "vue";
 import * as z from "zod";
 import emailjs from "@emailjs/browser";
+import { useToast } from "@nuxt/ui/runtime/composables/useToast.js";
 
 const schema = z.object({
   subject: z.string().trim().min(3, "Sujet trop court"),
