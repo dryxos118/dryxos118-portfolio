@@ -42,7 +42,8 @@ export const PROJECTS: Project[] = [
     id: "game-tracker",
     title: "Game Tracker",
     image: GAMETRACKER,
-    shortDescription: "Application de suivi et de gestion des jeux vidéo.",
+    shortDescription:
+      "Application de suivi et de gestion des jeux vidéo sur différents supports.",
     description:
       "Application de suivi et de gestion des jeux vidéo avec possibilité d'ajouter, modifier et supprimer des jeux, ainsi que de noter les jeux. Authentification sécurisée par JWT et stockage côté serveur avec ASP.NET / C#.",
     tags: getSkills([
