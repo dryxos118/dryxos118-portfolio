@@ -136,7 +136,7 @@ export const skills: Skill[] = [
   },
   {
     name: "Blazor",
-    icon: "simple-icons:dotnet",
+    icon: "simple-icons:blazor",
     color: "#936BC8",
     type: "OTHER_TECHNOLOGIES",
   },
@@ -288,6 +288,18 @@ export const skills: Skill[] = [
     name: "EmailJS",
     icon: "i-lucide-mail",
     color: "#FF4081",
+    type: "OTHER",
+  },
+  {
+    name: "MudBlazor",
+    icon: "simple-icons:blazor",
+    color: "#936BC8",
+    type: "OTHER",
+  },
+  {
+    name: "SQL Lite",
+    icon: "simple-icons:sqlite",
+    color: "#003B57",
     type: "OTHER",
   },
 ];

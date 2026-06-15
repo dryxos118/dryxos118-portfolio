@@ -1,5 +1,5 @@
 import THEBARAPP from "@/assets/images/the_bar_app.png";
-import POCKETBUDGET from "@/assets/images/pocket_budget.png";
+import GAMETRACKER from "@/assets/images/gameTracker.png";
 import PORTFOLIO from "@/assets/images/portfolio.png";
 import { getSkills, type Skill } from "./skills";
 
@@ -39,23 +39,21 @@ export const PROJECTS: Project[] = [
     repoBack: "https://github.com/dryxos118/the_bar_app",
   },
   {
-    id: "pocket-budget",
-    title: "Pocket Budget",
-    image: POCKETBUDGET,
-    shortDescription:
-      "Application de gestion de budget personnel avec suivi et visualisation des dépenses.",
+    id: "game-tracker",
+    title: "Game Tracker",
+    image: GAMETRACKER,
+    shortDescription: "Application de suivi et de gestion des jeux vidéo.",
     description:
-      "Application de gestion de budget personnel avec suivi des dépenses, gestion de comptes et visualisation de données via tableaux et graphiques interactifs. Authentification sécurisée par JWT et stockage côté serveur avec ASP.NET / C#.",
+      "Application de suivi et de gestion des jeux vidéo avec possibilité d'ajouter, modifier et supprimer des jeux, ainsi que de noter les jeux. Authentification sécurisée par JWT et stockage côté serveur avec ASP.NET / C#.",
     tags: getSkills([
       "C#",
-      "Vue.js",
+      "Blazor",
       ".NET / ASP.NET",
-      "Vuetify",
       "Entity Framework",
-      "JWT",
-      "MySQL",
+      "MudBlazor",
+      "SQL Lite",
     ]),
-    repoUrl: "https://github.com/dryxos118/PocketBudget",
+    repoUrl: "https://github.com/dryxos118/GameTracker",
     featured: true,
   },
   {
@@ -73,7 +71,7 @@ export const PROJECTS: Project[] = [
       "Tailwind CSS",
       "EmailJS",
     ]),
-    link: "https://dryxos118.github.io/mon-portfolio/",
-    repoUrl: "https://github.com/dryxos118/mon-portfolio",
+    link: "https://dryxos118.github.io/dryxos118-portfolio/",
+    repoUrl: "https://github.com/dryxos118/dryxos118-portfolio",
   },
 ];

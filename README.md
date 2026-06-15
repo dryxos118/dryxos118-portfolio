@@ -15,7 +15,7 @@ Portfolio développeur Full Stack réalisé avec Vue 3, TypeScript et Nuxt UI.
 - 📬 Formulaire de contact avec EmailJS
 - 🚀 Performance et UX optimisées
 
-## --- ## 🛠️ Stack Technique
+## 🛠️ Stack Technique
 
 ### Frontend
 
