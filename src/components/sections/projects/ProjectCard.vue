@@ -7,7 +7,7 @@
       y: 0,
       transition: { duration: 500 },
     }"
-    class="bg-default/50 border border-accented transition-all duration-300 hover:border-primary/40 hover:-translate-y-1"
+    class="bg-default/50 border border-accented transition-all lg:w-96 duration-300 hover:border-primary/40 hover:-translate-y-1 w-"
   >
     <div class="flex flex-col space-y-7">
       <img

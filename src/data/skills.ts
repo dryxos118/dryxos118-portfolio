@@ -141,12 +141,6 @@ export const skills: Skill[] = [
     type: "OTHER_TECHNOLOGIES",
   },
   {
-    name: "XUnit",
-    icon: "simple-icons:x",
-    color: "#181717",
-    type: "OTHER_TECHNOLOGIES",
-  },
-  {
     name: "Spring Boot",
     icon: "simple-icons:springboot",
     color: "#6DB33F",
@@ -156,12 +150,6 @@ export const skills: Skill[] = [
     name: "JPA / Hibernate",
     icon: "simple-icons:hibernate",
     color: "#59666C",
-    type: "OTHER_TECHNOLOGIES",
-  },
-  {
-    name: "JUnit",
-    icon: "simple-icons:junit5",
-    color: "#25A162",
     type: "OTHER_TECHNOLOGIES",
   },
   {

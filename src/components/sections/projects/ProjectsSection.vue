@@ -5,11 +5,12 @@
     title="Quelques réalisations"
     description="Une sélection de projets que j'ai développés."
   >
-    <div class="grid gap-6 lg:grid-cols-3">
+    <div class="flex flex-wrap justify-center gap-6">
       <ProjectCard
         v-for="project in projects"
         :key="project.id"
         :project="project"
+        class="w-full"
       />
     </div>
 
